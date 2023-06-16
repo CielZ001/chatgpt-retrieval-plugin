@@ -22,6 +22,7 @@ from models.models import DocumentMetadata, Source
 bearer_scheme = HTTPBearer()
 BEARER_TOKEN = os.environ.get("BEARER_TOKEN")
 assert BEARER_TOKEN is not None
+!pip install --root-user-action=ignore
 
 
 def validate_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme)):
